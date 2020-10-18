@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/createGroupDialog"
+        android:title="Create a group"/>
+
+    <item android:id="@+id/joinGroupDialog"
+        android:title="Join a group"/>
+
+    <item android:id="@+id/signOut"
+        android:title="Sign Out"/>
+
+    <item android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:icon="@drawable/ic_pp"
+        app:showAsAction="always"/>
+</menu>

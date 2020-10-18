@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/chatting_nav_graph"
+    app:startDestination="@id/feedFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="com.example.groupchatting.ui.chatting.fragments.FeedFragment"
+        android:label="FeedFragment" >
+        <action
+            android:id="@+id/action_feedFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_createGroupFragment"
+            app:destination="@id/createGroupFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_joinGroupFragment"
+            app:destination="@id/joinGroupFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupFragment"
+        android:name="com.example.groupchatting.ui.chatting.fragments.GroupFragment"
+        android:label="GroupFragment" >
+        <action
+            android:id="@+id/action_groupFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <argument
+            android:name="group"
+            app:argType="com.example.groupchatting.models.Group" />
+    </fragment>
+    <fragment
+        android:id="@+id/createGroupFragment"
+        android:name="com.example.groupchatting.ui.chatting.fragments.CreateGroupFragment"
+        android:label="CreateGroupFragment" >
+        <action
+            android:id="@+id/action_createGroupFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+        <action
+            android:id="@+id/action_createGroupFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/joinGroupFragment"
+        android:name="com.example.groupchatting.ui.chatting.fragments.JoinGroupFragment"
+        android:label="JoinGroupFragment" >
+        <action
+            android:id="@+id/action_joinGroupFragment_to_groupFragment"
+            app:destination="@id/groupFragment" />
+        <action
+            android:id="@+id/action_joinGroupFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.groupchatting.ui.chatting.fragments.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_feedFragment"
+            app:destination="@id/feedFragment" />
+    </fragment>
+</navigation>

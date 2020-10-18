@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/login_nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.groupchatting.ui.authentication.fragments.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_singUpFragment"
+            app:destination="@id/singUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singUpFragment"
+        android:name="com.example.groupchatting.ui.authentication.fragments.SingUpFragment"
+        android:label="SingUpFragment" >
+        <action
+            android:id="@+id/action_singUpFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+</navigation>
